@@ -1,22 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./globe.png";
+import "./App.css";
+import "./components/card.jsx";
+import PromptCard from "./components/card";
 
 function App() {
+  const card = [
+    {
+      id: 1,
+      question: "Afghanistan",
+      lowerCase: "afghanistan",
+      flag: "🇦🇫",
+      answer: "Kabul",
+    },
+    {
+      id: 2,
+      question: "Azerbaijan",
+      lowerCase: "azerbaijan",
+      flag: "🇦🇿",
+      answer: "Tirana",
+    },
+    {
+      id: 3,
+      question: "Algeria",
+      lowerCase: "algeria",
+      flag: "🇩🇿",
+      answer: "Algiers",
+    },
+    {
+      id: 4,
+      question: "Andorra",
+      lowerCase: "andorra",
+      flag: "🇦🇩",
+      answer: "Andorra la Vella",
+    },
+    {
+      id: 5,
+      question: "Bahamas",
+      lowerCase: "bahamas",
+      flag: "🇧🇸",
+      answer: "Nassau",
+    },
+  ];
+
+  const cardid = Math.floor(Math.random() * card.length);
+
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="bg-white App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <PromptCard card={card} />
       </header>
     </div>
   );
