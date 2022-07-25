@@ -36,7 +36,7 @@ function App() {
     {
       id: 5,
       question: "Bahamas",
-      lowerCase: "bahamas",
+      lowerCase: "bahamas-the",
       flag: "🇧🇸",
       answer: "Nassau",
     },
